@@ -34,5 +34,17 @@ namespace Shuffler.Tests
         {
             Assert.IsTrue(_generatedArray.Distinct().Count() == _generatedArray.Length, "All elements should be unique");
         }
+
+        [TestMethod]
+        public void MaxElementsTest()
+        {
+            Assert.IsTrue(_generatedArray.Max() == NumberOfItemsInResultArray, "Max value of elemenet in array incorrect");
+        }
+
+        [TestMethod]
+        public void MinElementTest()
+        {
+            Assert.IsTrue(_generatedArray.Min() == 1, "Min value of elemenet in array should be 1");
+        }
     }
 }
